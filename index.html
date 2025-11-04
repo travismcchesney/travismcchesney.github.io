@@ -1,27 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello David</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The 19th Lounge — Premium Indoor Golf in Aurora, CO</title>
+  <meta name="description" content="A modern indoor golf lounge and performance studio with simulators, lessons, leagues, and events. Opening in Aurora, CO — join the waitlist for early access." />
+  <meta name="author" content="The 19th Lounge" />
+
+  <meta property="og:title" content="The 19th Lounge — Premium Indoor Golf in Aurora, CO" />
+  <meta property="og:description" content="Simulators • Coaching • Leagues • Events. Join the waitlist for early access." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://the19thlounge.com/" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/favicon.ico" />
+
   <style>
+    :root {
+      --brand-primary: #fd7014;
+      --brand-secondary: #fd8f47;
+      --brand-accent: #dc5802;
+      --dark: #111111;
+      --medium: #2a2a2a;
+      --light: #ffffff;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+
     body {
       margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.5;
     }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: var(--light);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      height: 150px;
+    }
+
+    .cta {
+      background: var(--brand-primary);
+      color: var(--light);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 5%;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+      margin-bottom: 40px;
+    }
+
     h1 {
-      font-size: 8vw; /* Scales with viewport width */
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--brand-primary);
+    }
+
+    p.sub {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: var(--light);
+      padding: 20px;
+      border-radius: var(--radius);
+      border: 1px solid #eee;
+      box-shadow: var(--shadow);
+    }
+
+    .card h4, .card h2 {
+      color: var(--brand-primary);
+      margin-top: 0;
+    }
+
+    form {
+      background: var(--light);
+      padding: 20px;
+      border-radius: var(--radius);
+      border: 1px solid #eee;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    input, select {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      background: #fafafa;
+      color: #000;
+    }
+
+    button {
+      padding: 14px 20px;
+      background: var(--brand-accent);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+
+    footer {
       text-align: center;
-      margin: 0;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 40px;
+      padding-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>Hello David.</h1>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="The 19th Lounge logo" />
+    </div>
+    <a href="#waitlist" class="cta">Join the Waitlist</a>
+  </header>
+
+  <main>
+    <section class="hero-image">
+      <img src="/images/bay-hero.jpg" alt="Premium indoor golf simulator bay" />
+    </section>
+
+    <section>
+      <h1>Premium Indoor Golf — Aurora, CO</h1>
+      <p class="sub">A modern simulator lounge and performance studio blending pro-level technology with a relaxed, social atmosphere. Train smarter. Play year-round. Elevate your game.</p>
+
+      <div class="features">
+        <div class="card">
+          <h4>Tour-Grade Simulators</h4>
+          <p>High-speed cameras, precision data, and realistic course play for training and fun.</p>
+        </div>
+        <div class="card">
+          <h4>Professional Coaching</h4>
+          <p>PGA-certified instructors and structured lesson programs backed by advanced analytics.</p>
+        </div>
+        <div class="card">
+          <h4>Memberships & Leagues</h4>
+          <p>Flexible memberships, off-peak access, and social league nights for all skill levels.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="waitlist">
+      <form action="https://formspree.io/f/your-endpoint" method="POST">
+        <h2>Join the Waitlist</h2>
+        <p>Be the first to hear about launch updates, memberships, and founding-member offers.</p>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="you@example.com" required />
+        <select name="interest">
+          <option value="Membership">Membership</option>
+          <option value="Coaching">Coaching</option>
+          <option value="Leagues">Leagues</option>
+          <option value="Events">Private Events</option>
+        </select>
+        <button type="submit">Join Now</button>
+      </form>
+    </section>
+
+    <section id="coaches" style="margin-top:60px;">
+      <div class="card" style="border-left:6px solid var(--brand-primary);">
+        <h2>For Coaches & Instructors</h2>
+        <p>We’re building a small roster of experienced golf coaches to anchor our new indoor performance studio. Early partners will help shape the facility layout, technology choices, and training programs.</p>
+        <ul style="margin-left:20px;">
+          <li>Guaranteed lesson blocks and flexible scheduling</li>
+          <li>Revenue-share or rental options available</li>
+          <li>Marketing and exposure through The 19th Lounge network</li>
+          <li>Professional, year-round environment for your clients</li>
+        </ul>
+        <p>Interested? Join the waitlist above and check “Coaching,” or email <a href="mailto:hello@the19thlounge.com">hello@the19thlounge.com</a> to learn more.</p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> The 19th Lounge • hello@the19thlounge.com
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
