@@ -3,239 +3,201 @@
 <head>
   <meta charset='utf-8'/>
   <meta name='viewport' content='width=device-width, initial-scale=1'/>
-  <title>The 19th Lounge — Elevate your game.</title>
-  <meta name='description' content='Premium indoor golf performance studio and lounge in Aurora, CO. Join the waitlist.'/>
-  <link rel='icon' href='/favicon.ico'/>
+  <title>The 19th Lounge — Aurora’s indoor golf lounge is coming soon</title>
+  <meta name='description' content='The 19th Lounge is opening soon in Aurora, CO. Join the founding list for a premium indoor golf lounge and performance studio.'>
   <link rel='preconnect' href='https://fonts.googleapis.com'>
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-  <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway:wght@500;600;700&display=swap' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap' rel='stylesheet'>
   <style>
   :root{
-    --orange:#FD7014; --slate:#2A3A35; --cream:#F7F5EF; --dark:#111; --white:#fff; --forest:#1B4332;
-    --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.12);
-    --heading-font:'Raleway', 'Montserrat', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    --sans:'Montserrat', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    --orange:#FD7014;
+    --forest:#1B4332;
+    --forest-dark:#143124;
+    --cream:#F7F5EF;
+    --white:#fff;
+    --slate:#2A3A35;
+    --shadow:0 18px 45px rgba(0,0,0,.18);
+    --radius:18px;
+    --heading:'Raleway', 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --body:'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
   *{box-sizing:border-box}
-  body{margin:0; font-family:var(--sans); color:#1a1a1a; background:var(--white); line-height:1.6}
-  a{color:var(--slate); text-decoration:none; transition:color .2s}
+  body{margin:0; font-family:var(--body); background:var(--cream); color:var(--slate); line-height:1.6}
+  img{max-width:100%; display:block}
+  a{color:inherit; text-decoration:none; transition:color .2s ease}
   a:hover{color:var(--forest)}
-  .container{max-width:1100px; margin:0 auto; padding:24px}
-  main.container{padding:56px 24px 80px; display:grid; gap:56px}
-  header{display:flex; align-items:center; justify-content:space-between; padding:12px 24px; position:sticky; top:0; background:#fff; border-bottom:2px solid var(--forest); z-index:10}
-  header img{height:64px}
-  p{margin:0 0 18px}
-  h1,h2,h3{font-family:var(--heading-font); color:var(--slate); letter-spacing:-0.01em}
-  h1{margin:0 0 12px}
-  h2{margin:0 0 16px; font-size:clamp(26px,3.4vw,40px)}
-  h3{margin:0 0 10px; font-size:clamp(18px,2.2vw,22px)}
-  .cta{background:var(--orange); color:#fff; padding:10px 20px; border-radius:999px; font-weight:600; box-shadow:var(--shadow); letter-spacing:0.04em; text-transform:uppercase; font-size:13px}
+  button{font-family:inherit}
+  .page{min-height:100vh; display:flex; flex-direction:column}
 
-  /* HYBRID HERO */
-  .hero{position:relative; min-height:50vh; display:grid; align-items:end; border-bottom-left-radius:20px; border-bottom-right-radius:20px; overflow:hidden}
-  .hero img.bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
-  .hero:after{content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.65) 78%)}
-  .hero-content{position:relative; z-index:2; padding:40px 24px 56px; color:#fff}
-  .hero h1{font-size:clamp(36px,4.4vw,58px); margin:0 0 12px; color:#fff}
-  .hero .sub{font-size:clamp(17px,2.2vw,22px); opacity:.92; margin:0 0 20px}
-  .hero .location{font-weight:700; color:var(--orange); text-shadow:0 1px 3px rgba(0,0,0,.3)}
-  .hero .cta{display:inline-block; margin-top:8px}
-  .hero h1{border-bottom:3px solid var(--orange); padding-bottom:8px; display:inline-block}
+  .hero{position:relative; min-height:100vh; display:grid; align-items:center; justify-content:center; padding:clamp(80px,10vw,140px) clamp(20px,6vw,80px); color:var(--white); text-align:left; overflow:hidden}
+  .hero::before{content:''; position:absolute; inset:0; background:url('assets/images/hero-full-bright.jpg') center/cover no-repeat; z-index:0}
+  .hero::after{content:''; position:absolute; inset:0; background:linear-gradient(120deg, rgba(17,17,17,.35), rgba(17,17,17,.2)); z-index:1}
+  .hero-content{position:relative; z-index:2; width:100%; max-width:900px; display:grid; gap:28px; background:rgba(27,67,50,.18); border:1px solid rgba(255,255,255,.18); padding:44px; border-radius:var(--radius); backdrop-filter:blur(6px); box-shadow:0 24px 54px rgba(10,17,14,.28)}
+  .eyebrow{display:inline-flex; align-items:center; gap:12px; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; color:var(--orange)}
+  .eyebrow::before{content:''; width:36px; height:1px; background:var(--orange)}
+  h1{margin:0; font-family:var(--heading); font-weight:700; font-size:clamp(46px,7vw,82px); line-height:1.02; letter-spacing:-0.01em}
+  .hero-copy{margin:0; max-width:650px; font-size:clamp(18px,2.4vw,24px); color:rgba(255,255,255,.9)}
 
-  /* SECTIONS */
-  .features{display:grid; grid-template-columns:repeat(3,1fr); gap:24px}
-  .card{background:#fff; border:1px solid rgba(0,0,0,.05); border-top:3px solid var(--forest); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow); display:grid; grid-template-columns:48px 1fr; gap:10px 18px; align-items:flex-start}
-  .card-icon{width:42px; height:42px; display:inline-flex; align-items:center; justify-content:center; border-radius:12px; background:rgba(27,67,50,.06); color:var(--forest); justify-self:flex-start; grid-row:1 / span 2}
-  .card-icon svg{width:22px; height:22px; stroke:currentColor; fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round}
-  .card h3{margin:0 0 4px}
-  .card p{margin:0}
-  .wait{background:#fff; border:1px solid rgba(0,0,0,.08); padding:32px; border-radius:var(--radius); box-shadow:var(--shadow); display:grid; gap:18px}
-  .wait-intro{margin:0; font-size:16px}
-  .waitlist-highlights{display:grid; gap:8px; margin:0 0 4px}
-  .waitlist-highlights span{display:flex; align-items:flex-start; gap:10px; font-size:15px; color:var(--slate)}
-  .waitlist-highlights svg{width:18px; height:18px; stroke:var(--forest); stroke-width:1.8; fill:none; margin-top:2px}
-  .wait form{display:grid; gap:14px; margin-top:4px}
-  label{font-weight:600; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; color:var(--forest)}
-  input, select{width:100%; padding:12px; border-radius:10px; border:1px solid #ccc; background:#fafafa; margin:0; transition:border-color .2s; font-family:var(--sans); font-size:15px}
-  input:focus, select:focus{outline:none; border-color:var(--forest)}
-  button{padding:14px 20px; background:var(--orange); color:#fff; border:none; border-radius:12px; font-weight:600; cursor:pointer; letter-spacing:0.04em; text-transform:uppercase}
-  button:hover{opacity:.92}
-  .cream{background:var(--cream); border-radius:20px; padding:32px; border:1px solid rgba(0,0,0,.05)}
-  .coach-section{background:linear-gradient(135deg, rgba(27,67,50,.08) 0%, rgba(253,112,20,.08) 100%); display:grid; grid-template-columns:minmax(0,1fr) minmax(0,320px); gap:32px; align-items:flex-start}
-  .coach-eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; font-weight:600; color:var(--forest); background:rgba(27,67,50,.15); padding:6px 12px; border-radius:999px}
-  .coach-section h2{margin:12px 0 16px}
-  .coach-benefits{list-style:none; margin:0; padding:0; display:grid; gap:12px; font-size:15px}
-  .coach-benefits li{display:flex; align-items:flex-start; gap:10px; color:var(--slate)}
-  .coach-benefits svg{width:18px; height:18px; stroke:var(--forest); stroke-width:1.8; fill:none; margin-top:2px}
-  .coach-card{background:#fff; border-radius:18px; padding:26px; border:1px solid rgba(0,0,0,.08); box-shadow:var(--shadow); display:grid; gap:16px}
-  .cta-alt{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 18px; border-radius:999px; background:var(--forest); color:#fff; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; font-size:13px; transition:transform .2s, box-shadow .2s, background .2s}
-  .cta-alt:hover{transform:translateY(-1px); box-shadow:0 12px 24px rgba(27,67,50,.25); background:#173729; color:#fff}
-  .coach-card .coach-contact{font-size:14px; margin:0; color:var(--slate)}
-  .coach-card .coach-contact a{color:var(--forest)}
-  .fine-print{font-size:12px; color:#777; margin:12px 0 0}
-  footer{background:var(--forest); color:#dfe7e2; font-size:13px; padding:24px; text-align:center}
+  .waitlist{display:grid; gap:16px; background:rgba(247,245,239,.9); padding:28px; border-radius:var(--radius); color:var(--slate); border:1px solid rgba(27,67,50,.18)}
+  .waitlist h2{margin:0; font-family:var(--heading); font-size:22px; color:var(--forest)}
+  .waitlist p{margin:0; font-size:14px; color:rgba(36,51,45,.78)}
+  .waitlist form{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px}
+  .form-field{display:grid; gap:8px}
+  label{font-size:12px; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; color:var(--forest)}
+  input, select{width:100%; padding:14px 16px; border-radius:12px; border:1px solid rgba(27,67,50,.2); background:rgba(255,255,255,.95); font-size:15px; color:var(--slate); transition:border-color .2s, background .2s}
+  input::placeholder{color:rgba(36,51,45,.55)}
+  input:focus, select:focus{outline:none; border-color:var(--orange); background:var(--white)}
+  .form-actions{display:flex; flex-direction:column; gap:8px}
+  .waitlist button{padding:16px 18px; border-radius:12px; border:none; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; background:var(--orange); color:var(--white); cursor:pointer; transition:transform .2s, box-shadow .2s}
+  .waitlist button:hover{transform:translateY(-2px); box-shadow:0 18px 36px rgba(253,112,20,.32)}
+  .fine-print{font-size:12px; color:rgba(36,51,45,.6)}
 
-  @media (max-width:900px){
-    main.container{padding:40px 20px 64px; gap:40px}
-    header{padding:12px 20px}
-    header img{height:56px}
-    .features{grid-template-columns:1fr}
-    .hero-content{padding:48px 20px 52px}
-    .coach-section{grid-template-columns:1fr; gap:24px}
+  .highlights{display:flex; flex-wrap:wrap; gap:18px; margin-top:12px}
+  .highlight-pill{display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border-radius:999px; background:rgba(255,255,255,.18); color:#fff; font-size:13px; letter-spacing:0.08em; text-transform:uppercase}
+
+  main{padding:90px clamp(20px,6vw,80px) 110px; display:grid; gap:90px; background:var(--cream)}
+
+  .section{display:grid; gap:32px}
+  .section-title{display:grid; gap:12px; max-width:620px}
+  .section-title span{font-size:13px; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:var(--forest)}
+  .section-title h2{margin:0; font-family:var(--heading); font-size:clamp(28px,4vw,40px); color:var(--slate)}
+  .section-title p{margin:0; color:rgba(36,51,45,.8)}
+
+  .feature-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px}
+  .feature-card{background:var(--white); border:1px solid rgba(27,67,50,.14); border-radius:var(--radius); padding:26px; display:grid; gap:12px; box-shadow:0 16px 32px rgba(27,67,50,.12)}
+  .roadmap-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .feature-card h3{margin:0; font-family:var(--heading); font-size:20px; color:var(--forest)}
+  .feature-card p{margin:0; color:rgba(36,51,45,.75)}
+
+  .cta-panel{background:linear-gradient(120deg, rgba(27,67,50,.12), rgba(253,112,20,.12)); border-radius:var(--radius); padding:36px; display:grid; gap:18px; border:1px solid rgba(27,67,50,.16)}
+  .cta-panel h2{margin:0; font-family:var(--heading); font-size:clamp(26px,3.5vw,36px)}
+  .cta-panel p{margin:0; color:rgba(36,51,45,.8)}
+  .cta-panel a{display:inline-flex; align-items:center; gap:8px; padding:12px 18px; border-radius:999px; background:var(--forest); color:var(--white); font-weight:600; letter-spacing:0.08em; text-transform:uppercase; width:fit-content}
+  .cta-panel a:hover{background:var(--forest-dark)}
+
+  footer{padding:36px clamp(20px,6vw,80px); border-top:1px solid rgba(27,67,50,.12); display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; font-size:13px; color:rgba(36,51,45,.7)}
+
+  @media (max-width:960px){
+    .hero-content{padding:28px}
+    .waitlist form{grid-template-columns:1fr}
+    main{padding:80px 24px 100px}
+    .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media (max-width:640px){
+    .hero{padding:72px 20px 92px; text-align:left}
+    .hero-content{padding:24px}
+    h1{font-size:clamp(32px,8vw,48px)}
+    .feature-grid{grid-template-columns:1fr}
+    .roadmap-grid{grid-template-columns:1fr}
+    main{padding:70px 20px 90px; gap:70px}
   }
   </style>
 </head>
 <body>
-  <header>
-    <div class='logo'>
-      <img src='assets/images/logo.png' alt='The 19th Lounge logo'/>
-    </div>
-    <a href='#waitlist' class='cta'>Join the Waitlist</a>
-  </header>
-
-  <!-- HYBRID HERO with new images -->
-  <section class='hero'>
-    <picture>
-      <source media='(max-width: 900px)' srcset='assets/images/hero-mobile.jpg'>
-      <img class='bg' src='assets/images/hero-desktop.jpg' alt='Premium indoor golf bays'/>
-    </picture>
-    <div class='hero-content container'>
-      <h1>The 19th Lounge</h1>
-      <p class='sub'>A premium indoor golf performance studio and modern lounge in <span class='location'>Aurora, CO</span>.</p>
-      <a class='cta' href='#waitlist'>Get early access</a>
-    </div>
-  </section>
-
-  <main class='container'>
-    <!-- Existing features content preserved -->
-    <section class='features'>
-      <div class='card'>
-        <span class='card-icon' aria-hidden='true'>
-          <svg viewBox='0 0 24 24'>
-            <rect x='3.5' y='4.5' width='17' height='11' rx='2'/>
-            <path d='M8 20.5h8'/>
-            <path d='M12 15.5v5'/>
-            <circle cx='16.5' cy='10' r='2.1'/>
-          </svg>
-        </span>
-        <h3>Tour-Grade Simulators</h3>
-        <p>High-speed cameras, precision data, and realistic course play for training and fun.</p>
-      </div>
-      <div class='card'>
-        <span class='card-icon' aria-hidden='true'>
-          <svg viewBox='0 0 24 24'>
-            <circle cx='12' cy='6.5' r='2.5'/>
-            <path d='M12 9.5v4'/>
-            <path d='M6 20v-6.5l6-3 6 3V20'/>
-            <path d='M9 20h6'/>
-          </svg>
-        </span>
-        <h3>Professional Coaching</h3>
-        <p>PGA-certified instructors and structured lesson programs backed by advanced analytics.</p>
-      </div>
-      <div class='card'>
-        <span class='card-icon' aria-hidden='true'>
-          <svg viewBox='0 0 24 24'>
-            <path d='M12 3.5 6.5 6v5.5c0 4.1 2.6 6.9 5.5 8.5 2.9-1.6 5.5-4.4 5.5-8.5V6Z'/>
-            <path d='M9.5 11.5 11.5 13.5 14.5 9.5'/>
-          </svg>
-        </span>
-        <h3>Memberships & Leagues</h3>
-        <p>Flexible memberships, off-peak access, and social league nights for all skill levels.</p>
+  <div class='page'>
+    <section class='hero'>
+      <div class='hero-content'>
+        <span class='eyebrow'>Aurora, Colorado • Coming Spring 2025</span>
+        <h1>The 19th Lounge</h1>
+        <p class='hero-copy'>Tour-grade golf tech, a modern lounge environment, and a founding community shaping the experience from day one. Join the list to be first in the door.</p>
+        <div class='highlights'>
+          <span class='highlight-pill'>Founding rates</span>
+          <span class='highlight-pill'>Private preview events</span>
+          <span class='highlight-pill'>Coach partnerships</span>
+        </div>
+        <div class='waitlist' id='waitlist'>
+          <h2>Get launch updates</h2>
+          <p>Drop your info and choose how you want to be involved. Founding updates hit inboxes twice a month.</p>
+          <form action='https://formspree.io/f/your-endpoint' method='POST'>
+            <div class='form-field'>
+              <label for='wl-name'>Name</label>
+              <input id='wl-name' name='name' type='text' placeholder='Jordan Sample' required>
+            </div>
+            <div class='form-field'>
+              <label for='wl-email'>Email</label>
+              <input id='wl-email' name='email' type='email' placeholder='you@example.com' required>
+            </div>
+            <div class='form-field'>
+              <label for='wl-role'>Interested as</label>
+              <select id='wl-role' name='role' required>
+                <option value='' disabled selected>Select one</option>
+                <option value='Future Member'>Future Member / Player</option>
+                <option value='Coach'>Coach / Instructor</option>
+                <option value='League Captain'>League Captain</option>
+                <option value='Event Host'>Event Host</option>
+                <option value='Local Partner'>Local Partner</option>
+              </select>
+            </div>
+            <div class='form-actions'>
+              <button type='submit'>Keep me posted</button>
+              <span class='fine-print'>No spam. Just milestone updates, launch invites, and founding offers.</span>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
 
-    
+    <main>
+      <section class='section'>
+        <div class='section-title'>
+          <span>Why join now</span>
+          <h2>Founding members help shape the experience</h2>
+          <p>From coaching partnerships to lounge programming, we’re shaping the lineup with our earliest supporters.</p>
+        </div>
+        <div class='feature-grid'>
+          <div class='feature-card'>
+            <h3>Tech-first facilities</h3>
+            <p>TrackMan bays, putting lab, and data-driven coaching built for players who want measurable improvement.</p>
+          </div>
+          <div class='feature-card'>
+            <h3>Signature lounge</h3>
+            <p>Curated playlists, craft beverages, and concierge-level hosting for private events and league nights.</p>
+          </div>
+          <div class='feature-card'>
+            <h3>Flexible memberships</h3>
+            <p>Early members influence booking windows, guest policies, and league formats before the doors open.</p>
+          </div>
+        </div>
+      </section>
 
-    
-    
-      <!-- Move Coaching section below waitlist -->
-    <section id='waitlist' class='wait'>
-      <h2>Join the waitlist</h2>
-      <p class='wait-intro'>We’re curating the founding member experience right now. Share a few details and we’ll keep you in the loop with tailored updates, early session invites, and opening milestones.</p>
-      <div class='waitlist-highlights'>
-        <span>
-          <svg viewBox='0 0 24 24' aria-hidden='true'>
-            <path d='m5 12 4 4 10-10'/>
-          </svg>
-          Always-first access to booking windows
-        </span>
-        <span>
-          <svg viewBox='0 0 24 24' aria-hidden='true'>
-            <path d='m5 12 4 4 10-10'/>
-          </svg>
-          Founding-rate membership previews
-        </span>
-        <span>
-          <svg viewBox='0 0 24 24' aria-hidden='true'>
-            <path d='m5 12 4 4 10-10'/>
-          </svg>
-          Personal updates on launch progress
-        </span>
-        <span>
-          <svg viewBox='0 0 24 24' aria-hidden='true'>
-            <path d='m5 12 4 4 10-10'/>
-          </svg>
-          Dedicated outreach track for coaches and instructors
-        </span>
-      </div>
-      <form action='https://formspree.io/f/your-endpoint' method='POST'>
-        <label for='waitlist-name'>Your Name</label>
-        <input id='waitlist-name' type='text' name='name' placeholder='Jordan Sample' required />
-        <label for='waitlist-email'>Email</label>
-        <input id='waitlist-email' type='email' name='email' placeholder='you@example.com' required />
-        <label for='waitlist-role'>I’m interested as</label>
-        <select id='waitlist-role' name='role'>
-          <option value='Future Member'>Future Member / Player</option>
-          <option value='Coach'>Coach / Instructor</option>
-          <option value='League Captain'>League Captain</option>
-          <option value='Event Host'>Event Host</option>
-          <option value='Curious Local'>Curious Local</option>
-        </select>
-        <button type='submit'>Keep me posted</button>
-      </form>
-      <p>We’ll reach out personally as milestones unfold and offer chances to swing by for private previews.</p>
-      <p class='fine-print'>We respect your inbox. No spam — ever.</p>
-    </section>
+      <section class='section'>
+        <div class='section-title'>
+          <span>Stay close to the build</span>
+          <h2>Opening roadmap</h2>
+          <p>Follow along as the space comes to life. We’ll share milestones, behind-the-scenes drops, and ways to get involved.</p>
+        </div>
+        <div class='feature-grid roadmap-grid'>
+          <div class='feature-card'>
+            <h3>Design &amp; partner lineup</h3>
+            <p>Interior layout, bay design, and beverage programming finalize with input from founding members and coaches.</p>
+          </div>
+          <div class='feature-card'>
+            <h3>Construction &amp; install</h3>
+            <p>Buildout kicks off while simulator rigs, lounge furnishings, and lighting packages are staged for install.</p>
+          </div>
+          <div class='feature-card'>
+            <h3>Founding preview nights</h3>
+            <p>Waitlist members get first swing at booking windows, private walkthroughs, and launch-week events.</p>
+          </div>
+        </div>
+      </section>
 
-    <!-- Coaches section moved to bottom -->
-    <section id='coaches' class='cream coach-section'>
-      <div class='coach-content'>
-        <span class='coach-eyebrow'>For coaches & instructors</span>
-        <h2>Partner with The 19th Lounge from day one</h2>
-        <p>We’re building a tight roster of teaching pros who want a premium, year-round performance studio to call home. Early partners help shape the bay layouts, tech stack, and coaching experiences.</p>
-        <ul class='coach-benefits'>
-          <li>
-            <svg viewBox='0 0 24 24' aria-hidden='true'>
-              <path d='m5 12 4 4 10-10'/>
-            </svg>
-            Guaranteed lesson blocks with flexible scheduling for your clients.
-          </li>
-          <li>
-            <svg viewBox='0 0 24 24' aria-hidden='true'>
-              <path d='m5 12 4 4 10-10'/>
-            </svg>
-            Revenue-share or studio rental models tailored to your business.
-          </li>
-          <li>
-            <svg viewBox='0 0 24 24' aria-hidden='true'>
-              <path d='m5 12 4 4 10-10'/>
-            </svg>
-            Marketing support and exposure through The 19th Lounge community.
-          </li>
-        </ul>
-      </div>
-      <div class='coach-card'>
-        <h3>Let’s design the coaching hub</h3>
-        <p>Tell us you’re a coach when you join the waitlist and we’ll follow up with a discovery call, tech previews, and studio walkthrough invites.</p>
-        <a class='cta-alt' href='#waitlist'>I’m a coach</a>
-        <p class='coach-contact'>Prefer direct contact? Email <a href='mailto:hello@the19thlounge.com'>hello@the19thlounge.com</a>.</p>
-      </div>
-    </section>
+      <section class='section'>
+        <div class='cta-panel'>
+          <h2>Coaches &amp; instructors — let’s collaborate.</h2>
+          <p>We’re looking for a small crew of teaching pros to anchor The 19th Lounge. Select “Coach / Instructor” when you join the list or reach out directly.</p>
+          <a href='mailto:hello@the19thlounge.com'>Email the team</a>
+        </div>
+      </section>
+    </main>
 
-  </main>
-
-  <footer>© <span id='year'></span> The 19th Lounge • Elevate your game</footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+    <footer>
+      <span>© <span id='year'></span> The 19th Lounge • Aurora, CO</span>
+      <span>hello@the19thlounge.com</span>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear()
+  </script>
 </body>
 </html>
